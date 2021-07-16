@@ -34,10 +34,10 @@ public class Mako extends BaseRobot {
             web = Jsoup.connect(s).get();
             String words = "";
             words += (web.getElementsByTag("h1").text());
-            System.out.println(web.getElementsByTag("h2").text());
-            System.out.println(web.getElementsByTag("h3").text());
-            System.out.println(web.getElementsByTag("h4").text());
-            System.out.println(web.getElementsByTag("p").text());
+            words +=(web.getElementsByTag("h2").text());
+            words +=(web.getElementsByTag("h3").text());
+            words +=(web.getElementsByTag("h4").text());
+            words +=(web.getElementsByTag("p").text());
             String[] wordsArray = words.split(" ");
             for (String word : wordsArray) {
                 if (map.containsKey(word)) {

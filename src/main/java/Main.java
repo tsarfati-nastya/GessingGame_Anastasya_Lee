@@ -38,7 +38,6 @@ public class Main {
         System.out.println("hint: " + site.getLongestArticleTitle());
         int points = 0;
         Map<String, Integer> map = site.getWordsStatistics();
-        System.out.println(map);
         for (int i = 1; i < 6; i++) {
             System.out.println("guess " + i);
             points += map.getOrDefault(scanner.next(), 0);
